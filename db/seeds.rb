@@ -1,5 +1,6 @@
 
 
+
 teacher1 = Teacher.create first_name: "Philip", last_name:"Glass"
 teacher2 = Teacher.create first_name: "Ozzy",last_name:"Osborne"
 teacher3 = Teacher.create first_name: "Van",last_name:"Halen"
