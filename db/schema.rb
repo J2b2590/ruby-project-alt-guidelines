@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_29_205745) do
+ActiveRecord::Schema.define(version: 2020_10_01_223620) do
 
-  create_table "lessons", id: false, force: :cascade do |t|
-    t.integer "student_id", null: false
-    t.integer "teacher_id", null: false
+  create_table "lessons", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "teacher_id"
     t.string "instrument"
     t.string "skill_level"
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["student_id"], name: "index_lessons_on_student_id"
-    t.index ["teacher_id"], name: "index_lessons_on_teacher_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -29,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_09_29_205745) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "skill_level"
   end
 
   create_table "teachers", force: :cascade do |t|

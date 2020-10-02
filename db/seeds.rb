@@ -1,4 +1,6 @@
-
+Student.destroy_all
+Teacher.destroy_all
+Lesson.destroy_all
 
 
 teacher1 = Teacher.create first_name: "Philip", last_name:"Glass"
@@ -8,11 +10,11 @@ teacher4 = Teacher.create first_name: "Les",last_name:"Claypool"
 teacher5 = Teacher.create first_name: "Franz",last_name:"Listz"
 
 
-student1 = Student.create first_name: "Jimmy", last_name:"Lee"
-student2 = Student.create first_name: "Joe", last_name:"Jackson"
-student3 = Student.create first_name: "Lenard",last_name: "Cohen"
-student4 = Student.create first_name: "Fred",last_name: "Turner"
-student5 = Student.create first_name: "Bo", last_name:"Diddly"
+student1 = Student.create first_name: "Jimmy", last_name:"Lee", skill_level: "beginner"
+student2 = Student.create first_name: "Joe", last_name:"Jackson", skill_level: "beginner"
+student3 = Student.create first_name: "Lenard",last_name: "Cohen", skill_level: "beginner"
+student4 = Student.create first_name: "Fred",last_name: "Turner", skill_level: "beginner"
+student5 = Student.create first_name: "Bo", last_name:"Diddly", skill_level: "beginner"
 
 
 lesson1 = Lesson.create student_id: student1.id, teacher_id: teacher1.id, instrument: "Guitar", skill_level: "Beginner", date: "4/4/20"

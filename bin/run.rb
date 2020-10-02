@@ -2,10 +2,11 @@ require_relative '../config/environment'
 require_relative '../lib/command_line_interface.rb'
 
 
-greet_enter_name
 
-creating_lesson
+app = ScheduleApp.new 
+
+app.greet_enter_name
+
+app.delete_or_keep_lesson
 
 
-
-binding.pry
